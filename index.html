@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>SelfX - Self Care &amp; Looksmaxing Journey</title>
+    <meta name="description" content="A premium daily planner, 100% guaranteed wake-up math alarm, daily habits tracker, water intake logger, custom challenges, progress journal, and notes." />
+    <meta property="og:title" content="SelfX - Self Care &amp; Looksmaxing Journey" />
+    <meta property="og:description" content="A premium daily planner, 100% guaranteed wake-up math alarm, daily habits tracker, water intake logger, custom challenges, progress journal, and notes." />
+    <meta name="theme-color" content="#050507" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SelfX" />
+    <meta name="application-name" content="SelfX" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <script>
+      // Global error suppression for non-fatal service worker fetch / update exceptions (common in iframes, cross-origin embeds, and offline state)
+      window.addEventListener('unhandledrejection', function(event) {
+        var reason = event.reason;
+        if (reason) {
+          var str = (reason.message || reason.stack || String(reason) || '').toLowerCase();
+          if (str.indexOf('serviceworker') !== -1 || str.indexOf('service worker') !== -1 || str.indexOf('failed to update') !== -1) {
+            console.warn('[SW Non-fatal handled rejection]:', reason);
+            event.preventDefault();
+          }
+        }
+      });
+
+      // Safe Service Worker registration with guarded background update checks
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          try {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' })
+              .then(function(reg) {
+                if (reg && typeof reg.update === 'function') {
+                  reg.update().catch(function(err) {
+                    console.warn('PWA ServiceWorker background update check skipped:', err);
+                  });
+                }
+                console.log('PWA ServiceWorker ready with scope:', reg ? reg.scope : '/');
+              })
+              .catch(function(err) {
+                console.warn('PWA ServiceWorker registration issue:', err);
+              });
+          } catch (err) {
+            console.warn('ServiceWorker registration restricted in current context:', err);
+          }
+        });
+      }
+
+      window.deferredPWAInstallPrompt = null;
+      window.addEventListener('beforeinstallprompt', function(e) {
+        window.deferredPWAInstallPrompt = e;
+        window.dispatchEvent(new CustomEvent('pwa-prompt-ready'));
+      });
+
+      window.addEventListener('appinstalled', function() {
+        window.deferredPWAInstallPrompt = null;
+        window.dispatchEvent(new CustomEvent('pwa-installed'));
+      });
+    </script>
+  </head>
+  <body class="bg-[#0a0a0c] select-none">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+.git
+.github
+.aistudio
+android/
+*.bak
+*.log
+.DS_Store

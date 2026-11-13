@@ -1,0 +1,11 @@
+{
+  "name": "Remix Remix Remix Remix Remix Remix Remix Remix Remix Remix Remix 7x Remix yy Self Care \u0026 Lookmaxing Journey",
+  "description": "A premium daily planner, 100% guaranteed wake-up math alarm, daily habits tracker, water intake logger, custom challenges, progress journal, and notes.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

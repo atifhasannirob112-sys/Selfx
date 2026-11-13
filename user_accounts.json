@@ -1,0 +1,660 @@
+{
+  "niromax": {
+    "profile": {
+      "loggedIn": true,
+      "name": "Atif Nirob",
+      "username": "niromax",
+      "bio": "Daily consistency & transformation 🚀",
+      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+      "password": "",
+      "accountId": "SELFX-883A",
+      "joinedAt": "2026-11-12T07:24:51.321Z",
+      "isLead": true
+    },
+    "habits": [
+      {
+        "id": "hair-care",
+        "name": "Hair Care",
+        "description": "Scalp massage, oil treatments, cleansing, or brushing routine.",
+        "completed": false
+      },
+      {
+        "id": "skin-care",
+        "name": "Skin Care",
+        "description": "Cleanse, moisturizer, active serums (retinol/vitamin C), and daily SPF.",
+        "completed": false
+      },
+      {
+        "id": "body-fitness",
+        "name": "Body Fitness",
+        "description": "Core workout, strength lifting, posture work, or target body drills.",
+        "completed": false
+      },
+      {
+        "id": "walk-run",
+        "name": "Walk/Run (10k steps)",
+        "description": "Get moving outdoor or tread mill, check smartband steps tracker.",
+        "completed": false
+      },
+      {
+        "id": "face-exercises",
+        "name": "Face Exercises",
+        "description": "Mewing, jawline exercises, gua sha treatment, or lymphatic drainage.",
+        "completed": false
+      },
+      {
+        "id": "talk-less",
+        "name": "Talk Less/Listen More",
+        "description": "Focus on thoughtful speaking, visual mystery, and active daily listening.",
+        "completed": false
+      }
+    ],
+    "points": 0,
+    "streak": 0,
+    "badges": [],
+    "water": {
+      "count": 0,
+      "goal": 8
+    },
+    "faith": {
+      "fajr": false,
+      "zohor": false,
+      "achr": false,
+      "magrib": false,
+      "esha": false,
+      "quranPlayed": false
+    },
+    "challenges": [],
+    "todos": [],
+    "notes": [],
+    "photos": [],
+    "dashState": {
+      "prayers": false,
+      "habits": false,
+      "selfie": false,
+      "movie": false,
+      "youtube": false,
+      "gym": false,
+      "water": false
+    },
+    "alarm": {
+      "enabled": false,
+      "time": "05:30",
+      "wakeUpHistory": [],
+      "isTriggered": false
+    },
+    "journalDuration": 30,
+    "movies": [],
+    "crushes": [],
+    "loveList": [],
+    "lastSyncedAt": "2026-11-12T15:53:11.116Z",
+    "updatedAt": "2026-11-12T15:53:12.170Z"
+  },
+  "@niromax": {
+    "profile": {
+      "loggedIn": true,
+      "name": "Atif Nirob",
+      "username": "niromax",
+      "bio": "Daily consistency & transformation 🚀",
+      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+      "password": "",
+      "accountId": "SELFX-883A",
+      "joinedAt": "2026-11-12T07:24:51.321Z",
+      "isLead": true
+    },
+    "habits": [
+      {
+        "id": "hair-care",
+        "name": "Hair Care",
+        "description": "Scalp massage, oil treatments, cleansing, or brushing routine.",
+        "completed": false
+      },
+      {
+        "id": "skin-care",
+        "name": "Skin Care",
+        "description": "Cleanse, moisturizer, active serums (retinol/vitamin C), and daily SPF.",
+        "completed": false
+      },
+      {
+        "id": "body-fitness",
+        "name": "Body Fitness",
+        "description": "Core workout, strength lifting, posture work, or target body drills.",
+        "completed": false
+      },
+      {
+        "id": "walk-run",
+        "name": "Walk/Run (10k steps)",
+        "description": "Get moving outdoor or tread mill, check smartband steps tracker.",
+        "completed": false
+      },
+      {
+        "id": "face-exercises",
+        "name": "Face Exercises",
+        "description": "Mewing, jawline exercises, gua sha treatment, or lymphatic drainage.",
+        "completed": false
+      },
+      {
+        "id": "talk-less",
+        "name": "Talk Less/Listen More",
+        "description": "Focus on thoughtful speaking, visual mystery, and active daily listening.",
+        "completed": false
+      }
+    ],
+    "points": 0,
+    "streak": 0,
+    "badges": [],
+    "water": {
+      "count": 0,
+      "goal": 8
+    },
+    "faith": {
+      "fajr": false,
+      "zohor": false,
+      "achr": false,
+      "magrib": false,
+      "esha": false,
+      "quranPlayed": false
+    },
+    "challenges": [],
+    "todos": [],
+    "notes": [],
+    "photos": [],
+    "dashState": {
+      "prayers": false,
+      "habits": false,
+      "selfie": false,
+      "movie": false,
+      "youtube": false,
+      "gym": false,
+      "water": false
+    },
+    "alarm": {
+      "enabled": false,
+      "time": "05:30",
+      "wakeUpHistory": [],
+      "isTriggered": false
+    },
+    "journalDuration": 30,
+    "movies": [],
+    "crushes": [],
+    "loveList": [],
+    "lastSyncedAt": "2026-11-12T15:53:11.116Z",
+    "updatedAt": "2026-11-12T15:53:12.170Z"
+  },
+  "itsatifbro": {
+    "profile": {
+      "loggedIn": true,
+      "name": "Atif Nirob",
+      "username": "niromax",
+      "bio": "Daily consistency & transformation journey 🚀",
+      "avatarUrl": "data:image/jpeg;base64,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",
+      "password": "niromax",
+      "accountId": "SELFX-3133",
+      "joinedAt": "2026-09-24T09:40:02.174Z",
+      "isLead": false
+    },
+    "habits": [
+      {
+        "id": "hair-care",
+        "name": "Hair Care",
+        "description": "Scalp massage, oil treatments, cleansing, or brushing routine.",
+        "completed": false
+      },
+      {
+        "id": "skin-care",
+        "name": "Skin Care",
+        "description": "Cleanse, moisturizer, active serums (retinol/vitamin C), and daily SPF.",
+        "completed": false
+      },
+      {
+        "id": "body-fitness",
+        "name": "Body Fitness",
+        "description": "Core workout, strength lifting, posture work, or target body drills.",
+        "completed": false
+      },
+      {
+        "id": "walk-run",
+        "name": "Walk/Run (10k steps)",
+        "description": "Get moving outdoor or tread mill, check smartband steps tracker.",
+        "completed": false
+      },
+      {
+        "id": "face-exercises",
+        "name": "Face Exercises",
+        "description": "Mewing, jawline exercises, gua sha treatment, or lymphatic drainage.",
+        "completed": false
+      },
+      {
+        "id": "talk-less",
+        "name": "Talk Less/Listen More",
+        "description": "Focus on thoughtful speaking, visual mystery, and active daily listening.",
+        "completed": false
+      }
+    ],
+    "points": 20,
+    "streak": 0,
+    "badges": [],
+    "water": {
+      "count": 0,
+      "goal": 8
+    },
+    "faith": {
+      "fajr": false,
+      "zohor": false,
+      "achr": false,
+      "magrib": false,
+      "esha": false,
+      "quranPlayed": false,
+      "tahajjud": false,
+      "quranPages": 0,
+      "dhikrCount": 0,
+      "dhikrTarget": 33,
+      "adhkarMorningCompleted": [],
+      "adhkarEveningCompleted": [],
+      "imanPoints": 0
+    },
+    "challenges": [],
+    "todos": [],
+    "notes": [],
+    "photos": [],
+    "dashState": {
+      "prayers": false,
+      "habits": false,
+      "selfie": false,
+      "movie": false,
+      "youtube": false,
+      "gym": false,
+      "water": false
+    },
+    "alarm": {
+      "enabled": false,
+      "time": "05:30",
+      "wakeUpHistory": [],
+      "isTriggered": false
+    },
+    "journalDuration": 30,
+    "movies": [],
+    "crushes": [],
+    "loveList": [],
+    "lastSyncedAt": "2026-09-27T09:22:43.244Z",
+    "updatedAt": "2026-09-29T09:06:38.644Z"
+  },
+  "atif": {
+    "profile": {
+      "loggedIn": true,
+      "name": "Atif Nirob",
+      "username": "niromax",
+      "bio": "Daily consistency & transformation journey 🚀",
+      "avatarUrl": "data:image/jpeg;base64,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",
+      "password": "niromax",
+      "accountId": "SELFX-3133",
+      "joinedAt": "2026-09-24T09:40:02.174Z",
+      "isLead": false
+    },
+    "habits": [
+      {
+        "id": "hair-care",
+        "name": "Hair Care",
+        "description": "Scalp massage, oil treatments, cleansing, or brushing routine.",
+        "completed": false
+      },
+      {
+        "id": "skin-care",
+        "name": "Skin Care",
+        "description": "Cleanse, moisturizer, active serums (retinol/vitamin C), and daily SPF.",
+        "completed": false
+      },
+      {
+        "id": "body-fitness",
+        "name": "Body Fitness",
+        "description": "Core workout, strength lifting, posture work, or target body drills.",
+        "completed": false
+      },
+      {
+        "id": "walk-run",
+        "name": "Walk/Run (10k steps)",
+        "description": "Get moving outdoor or tread mill, check smartband steps tracker.",
+        "completed": false
+      },
+      {
+        "id": "face-exercises",
+        "name": "Face Exercises",
+        "description": "Mewing, jawline exercises, gua sha treatment, or lymphatic drainage.",
+        "completed": false
+      },
+      {
+        "id": "talk-less",
+        "name": "Talk Less/Listen More",
+        "description": "Focus on thoughtful speaking, visual mystery, and active daily listening.",
+        "completed": false
+      }
+    ],
+    "points": 20,
+    "streak": 0,
+    "badges": [],
+    "water": {
+      "count": 0,
+      "goal": 8
+    },
+    "faith": {
+      "fajr": false,
+      "zohor": false,
+      "achr": false,
+      "magrib": false,
+      "esha": false,
+      "quranPlayed": false,
+      "tahajjud": false,
+      "quranPages": 0,
+      "dhikrCount": 0,
+      "dhikrTarget": 33,
+      "adhkarMorningCompleted": [],
+      "adhkarEveningCompleted": [],
+      "imanPoints": 0
+    },
+    "challenges": [],
+    "todos": [],
+    "notes": [],
+    "photos": [],
+    "dashState": {
+      "prayers": false,
+      "habits": false,
+      "selfie": false,
+      "movie": false,
+      "youtube": false,
+      "gym": false,
+      "water": false
+    },
+    "alarm": {
+      "enabled": false,
+      "time": "05:30",
+      "wakeUpHistory": [],
+      "isTriggered": false
+    },
+    "journalDuration": 30,
+    "movies": [],
+    "crushes": [],
+    "loveList": [],
+    "lastSyncedAt": "2026-09-27T09:22:43.244Z",
+    "updatedAt": "2026-09-29T09:06:38.644Z"
+  },
+  "itsatifbro@gmail.com": {
+    "profile": {
+      "loggedIn": true,
+      "name": "Atif Nirob",
+      "username": "niromax",
+      "bio": "Daily consistency & transformation journey 🚀",
+      "avatarUrl": "data:image/jpeg;base64,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",
+      "password": "niromax",
+      "accountId": "SELFX-3133",
+      "joinedAt": "2026-09-24T09:40:02.174Z",
+      "isLead": false
+    },
+    "habits": [
+      {
+        "id": "hair-care",
+        "name": "Hair Care",
+        "description": "Scalp massage, oil treatments, cleansing, or brushing routine.",
+        "completed": false
+      },
+      {
+        "id": "skin-care",
+        "name": "Skin Care",
+        "description": "Cleanse, moisturizer, active serums (retinol/vitamin C), and daily SPF.",
+        "completed": false
+      },
+      {
+        "id": "body-fitness",
+        "name": "Body Fitness",
+        "description": "Core workout, strength lifting, posture work, or target body drills.",
+        "completed": false
+      },
+      {
+        "id": "walk-run",
+        "name": "Walk/Run (10k steps)",
+        "description": "Get moving outdoor or tread mill, check smartband steps tracker.",
+        "completed": false
+      },
+      {
+        "id": "face-exercises",
+        "name": "Face Exercises",
+        "description": "Mewing, jawline exercises, gua sha treatment, or lymphatic drainage.",
+        "completed": false
+      },
+      {
+        "id": "talk-less",
+        "name": "Talk Less/Listen More",
+        "description": "Focus on thoughtful speaking, visual mystery, and active daily listening.",
+        "completed": false
+      }
+    ],
+    "points": 20,
+    "streak": 0,
+    "badges": [],
+    "water": {
+      "count": 0,
+      "goal": 8
+    },
+    "faith": {
+      "fajr": false,
+      "zohor": false,
+      "achr": false,
+      "magrib": false,
+      "esha": false,
+      "quranPlayed": false,
+      "tahajjud": false,
+      "quranPages": 0,
+      "dhikrCount": 0,
+      "dhikrTarget": 33,
+      "adhkarMorningCompleted": [],
+      "adhkarEveningCompleted": [],
+      "imanPoints": 0
+    },
+    "challenges": [],
+    "todos": [],
+    "notes": [],
+    "photos": [],
+    "dashState": {
+      "prayers": false,
+      "habits": false,
+      "selfie": false,
+      "movie": false,
+      "youtube": false,
+      "gym": false,
+      "water": false
+    },
+    "alarm": {
+      "enabled": false,
+      "time": "05:30",
+      "wakeUpHistory": [],
+      "isTriggered": false
+    },
+    "journalDuration": 30,
+    "movies": [],
+    "crushes": [],
+    "loveList": [],
+    "lastSyncedAt": "2026-09-27T09:22:43.244Z",
+    "updatedAt": "2026-09-29T09:06:38.644Z"
+  },
+  "user_3033": {
+    "profile": {
+      "loggedIn": true,
+      "name": "Glowup Member #3033",
+      "username": "user_3033",
+      "bio": "Daily consistency & transformation journey 🚀",
+      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150",
+      "password": "",
+      "accountId": "SELFX-3033",
+      "joinedAt": "2026-10-20T15:17:02.542Z",
+      "isLead": false
+    },
+    "habits": [
+      {
+        "id": "hair-care",
+        "name": "Hair Care",
+        "description": "Scalp massage, oil treatments, cleansing, or brushing routine.",
+        "completed": false
+      },
+      {
+        "id": "skin-care",
+        "name": "Skin Care",
+        "description": "Cleanse, moisturizer, active serums (retinol/vitamin C), and daily SPF.",
+        "completed": false
+      },
+      {
+        "id": "body-fitness",
+        "name": "Body Fitness",
+        "description": "Core workout, strength lifting, posture work, or target body drills.",
+        "completed": false
+      },
+      {
+        "id": "walk-run",
+        "name": "Walk/Run (10k steps)",
+        "description": "Get moving outdoor or tread mill, check smartband steps tracker.",
+        "completed": false
+      },
+      {
+        "id": "face-exercises",
+        "name": "Face Exercises",
+        "description": "Mewing, jawline exercises, gua sha treatment, or lymphatic drainage.",
+        "completed": false
+      },
+      {
+        "id": "talk-less",
+        "name": "Talk Less/Listen More",
+        "description": "Focus on thoughtful speaking, visual mystery, and active daily listening.",
+        "completed": false
+      }
+    ],
+    "points": 0,
+    "streak": 0,
+    "badges": [],
+    "water": {
+      "count": 0,
+      "goal": 8
+    },
+    "faith": {
+      "fajr": false,
+      "zohor": false,
+      "achr": false,
+      "magrib": false,
+      "esha": false,
+      "quranPlayed": false
+    },
+    "challenges": [],
+    "todos": [],
+    "notes": [],
+    "photos": [],
+    "dashState": {
+      "prayers": false,
+      "habits": false,
+      "selfie": false,
+      "movie": false,
+      "youtube": false,
+      "gym": false,
+      "water": false
+    },
+    "alarm": {
+      "enabled": false,
+      "time": "05:30",
+      "isTriggered": false,
+      "wakeUpHistory": []
+    },
+    "journalDuration": 30,
+    "movies": [],
+    "crushes": [],
+    "loveList": [],
+    "lastSyncedAt": "2026-10-20T15:17:06.641Z",
+    "updatedAt": "2026-10-20T15:18:02.019Z"
+  },
+  "@user_3033": {
+    "profile": {
+      "loggedIn": true,
+      "name": "Glowup Member #3033",
+      "username": "user_3033",
+      "bio": "Daily consistency & transformation journey 🚀",
+      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150",
+      "password": "",
+      "accountId": "SELFX-3033",
+      "joinedAt": "2026-10-20T15:17:02.542Z",
+      "isLead": false
+    },
+    "habits": [
+      {
+        "id": "hair-care",
+        "name": "Hair Care",
+        "description": "Scalp massage, oil treatments, cleansing, or brushing routine.",
+        "completed": false
+      },
+      {
+        "id": "skin-care",
+        "name": "Skin Care",
+        "description": "Cleanse, moisturizer, active serums (retinol/vitamin C), and daily SPF.",
+        "completed": false
+      },
+      {
+        "id": "body-fitness",
+        "name": "Body Fitness",
+        "description": "Core workout, strength lifting, posture work, or target body drills.",
+        "completed": false
+      },
+      {
+        "id": "walk-run",
+        "name": "Walk/Run (10k steps)",
+        "description": "Get moving outdoor or tread mill, check smartband steps tracker.",
+        "completed": false
+      },
+      {
+        "id": "face-exercises",
+        "name": "Face Exercises",
+        "description": "Mewing, jawline exercises, gua sha treatment, or lymphatic drainage.",
+        "completed": false
+      },
+      {
+        "id": "talk-less",
+        "name": "Talk Less/Listen More",
+        "description": "Focus on thoughtful speaking, visual mystery, and active daily listening.",
+        "completed": false
+      }
+    ],
+    "points": 0,
+    "streak": 0,
+    "badges": [],
+    "water": {
+      "count": 0,
+      "goal": 8
+    },
+    "faith": {
+      "fajr": false,
+      "zohor": false,
+      "achr": false,
+      "magrib": false,
+      "esha": false,
+      "quranPlayed": false
+    },
+    "challenges": [],
+    "todos": [],
+    "notes": [],
+    "photos": [],
+    "dashState": {
+      "prayers": false,
+      "habits": false,
+      "selfie": false,
+      "movie": false,
+      "youtube": false,
+      "gym": false,
+      "water": false
+    },
+    "alarm": {
+      "enabled": false,
+      "time": "05:30",
+      "isTriggered": false,
+      "wakeUpHistory": []
+    },
+    "journalDuration": 30,
+    "movies": [],
+    "crushes": [],
+    "loveList": [],
+    "lastSyncedAt": "2026-10-20T15:17:06.641Z",
+    "updatedAt": "2026-10-20T15:18:02.019Z"
+  }
+}

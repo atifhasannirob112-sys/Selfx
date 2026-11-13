@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Dream Day Routine Widget</title>
+    <meta name="theme-color" content="#0a0a0c" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Dream Widget" />
+    <link rel="manifest" href="/manifest-widget.json" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #090a0d;
+        color: #ffffff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      .hide-scrollbar::-webkit-scrollbar { display: none; }
+      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+  </head>
+  <body class="min-h-screen bg-[#090a0d] flex flex-col items-center justify-start p-3 sm:p-5">
+    
+    <!-- Widget Wrapper -->
+    <div class="w-full max-w-md space-y-4">
+
+      <!-- Top Action Bar -->
+      <div class="flex items-center justify-between px-1 pt-1">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-[11px] font-mono text-zinc-400 font-bold uppercase tracking-wider">Dream Day Live Widget</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <!-- Install Button (visible if installable) -->
+          <button id="btn-install" class="px-3 py-1.5 rounded-full bg-gradient-to-r from-amber-400 to-yellow-400 text-zinc-950 font-black text-[11px] uppercase tracking-wider flex items-center gap-1.5 shadow-md active:scale-95 transition-transform cursor-pointer">
+            <span>📲 ফোনে পিন করুন</span>
+          </button>
+          
+          <a href="/" class="p-2 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white text-xs font-mono">
+            App ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- MAIN WIDGET CARD -->
+      <div class="w-full rounded-3xl bg-zinc-900/90 border border-amber-500/30 p-4 sm:p-5 shadow-[0_20px_50px_rgba(0,0,0,0.8)] space-y-4">
+        
+        <!-- Header: Time & Date -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span id="widget-clock" class="text-4xl sm:text-5xl font-light tracking-tight text-white font-sans">
+                12:00
+              </span>
+              <span id="widget-ampm" class="text-xs font-mono uppercase text-amber-400 font-bold">
+                AM
+              </span>
+            </div>
+            <p id="widget-date" class="text-[11px] text-zinc-400 font-medium pt-0.5">
+              Loading date...
+            </p>
+          </div>
+
+          <div class="text-right">
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 font-bold uppercase tracking-wider inline-block">
+              Daily Routine
+            </span>
+            <p id="widget-stats" class="text-[10px] text-zinc-400 font-mono pt-1">
+              0/0 Done (0%)
+            </p>
+          </div>
+        </div>
+
+        <!-- ONGOING ROUTINE HERO WITH PHOTO -->
+        <div id="ongoing-routine-card" class="rounded-2xl bg-black/40 border border-white/10 overflow-hidden space-y-3 p-3">
+          
+          <!-- Image Container -->
+          <div id="ongoing-image-container" class="relative w-full h-36 sm:h-44 rounded-xl overflow-hidden shadow-inner bg-zinc-950">
+            <img id="ongoing-image" src="" alt="Ongoing Routine" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent"></div>
+            
+            <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono text-amber-400 font-bold">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Ongoing Routine
+            </div>
+
+            <div id="ongoing-timerange" class="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono text-zinc-200 font-bold">
+              --:-- - --:--
+            </div>
+
+            <div class="absolute bottom-2.5 inset-x-2.5">
+              <h3 id="ongoing-title" class="text-sm sm:text-base font-bold text-white drop-shadow-md leading-tight">
+                Loading routine...
+              </h3>
+            </div>
+          </div>
+
+          <!-- Done Button for Ongoing Routine -->
+          <button id="btn-toggle-ongoing" class="w-full py-2.5 px-3 rounded-xl border text-xs font-bold flex items-center justify-center gap-2 cursor-pointer active:scale-98 transition-all bg-gradient-to-r from-amber-400 to-yellow-400 text-zinc-950 border-amber-400/50 shadow-md">
+            <span>✓ Mark Ongoing Routine Done (টিক দিন)</span>
+          </button>
+        </div>
+
+        <!-- TODAY'S ROUTINE CHECKLIST -->
+        <div class="space-y-2 pt-1">
+          <div class="flex items-center justify-between px-1">
+            <span class="text-xs font-mono text-zinc-200 uppercase font-bold flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-amber-400 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+              Today's To-Do Routine
+            </span>
+            <span id="checklist-progress-text" class="text-[10px] font-mono text-amber-400 font-bold">
+              0% Done
+            </span>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
+            <div id="checklist-progressbar" class="h-full bg-gradient-to-r from-amber-400 to-emerald-400 rounded-full transition-all duration-300" style="width: 0%"></div>
+          </div>
+
+          <!-- Task Items Container -->
+          <div id="tasks-list" class="space-y-1.5 max-h-60 overflow-y-auto pr-1 hide-scrollbar">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Quick Add Task -->
+          <div class="pt-2 flex gap-2">
+            <input id="input-new-task" type="text" placeholder="+ নতুন কাজ যোগ করুন..." class="flex-1 bg-black/50 border border-white/15 rounded-xl px-3 py-2 text-xs text-white placeholder:text-zinc-500 outline-none focus:border-amber-400 transition-colors" />
+            <button id="btn-add-task" class="px-3 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold text-xs flex items-center gap-1 cursor-pointer transition-colors">
+              + Add
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Info -->
+      <p class="text-[10px] text-zinc-500 text-center font-mono">
+        SelfX Dream Day Offline Live Widget • Synchronized with Storage
+      </p>
+
+    </div>
+
+    <!-- Script for offline logic & live state sync -->
+    <script>
+      let deferredInstallPrompt = null;
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredInstallPrompt = e;
+        const btn = document.getElementById('btn-install');
+        if (btn) btn.style.display = 'flex';
+      });
+
+      document.getElementById('btn-install').addEventListener('click', async () => {
+        if (deferredInstallPrompt) {
+          deferredInstallPrompt.prompt();
+          const choice = await deferredInstallPrompt.userChoice;
+          if (choice && choice.outcome === 'accepted') {
+            deferredInstallPrompt = null;
+          }
+        } else {
+          alert("ফোনের ব্রাউজার মেন্যু (৩-ডট ⋮) থেকে 'Add to Home screen' চাপলেই এটি আলাদা উইজেট হিসেবে হোম স্ক্রিনে চলে আসবে!");
+        }
+      });
+
+      // Sound chime
+      function playChime() {
+        try {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (!AudioContextClass) return;
+          const ctx = new AudioContextClass();
+          const now = ctx.currentTime;
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(523.25, now);
+          osc.frequency.exponentialRampToValueAtTime(659.25, now + 0.08);
+          osc.frequency.exponentialRampToValueAtTime(783.99, now + 0.16);
+          gain.gain.setValueAtTime(0.18, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now);
+          osc.stop(now + 0.36);
+        } catch (e) {}
+      }
+
+      // Today's date string
+      const todayDateStr = new Date().toISOString().split('T')[0];
+
+      // Load activities
+      function loadActivities() {
+        try {
+          const s = localStorage.getItem('selfx_dream_day_routine_v7') || localStorage.getItem('lookmax_dream_activities_v2');
+          if (s) {
+            const parsed = JSON.parse(s);
+            if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+          }
+        } catch (e) {}
+        return [
+          { id: 'dd_1', title: 'Wake Up, Salah & Morning Glow', startTime: '06:00', endTime: '07:00', visionImageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&fit=crop&q=80' },
+          { id: 'dd_2', title: 'Deep Work Block', startTime: '09:00', endTime: '12:00', visionImageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&auto=format&fit=crop&q=80' },
+          { id: 'dd_3', title: 'Salah & Lunch Nutrition', startTime: '12:30', endTime: '13:30', visionImageUrl: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&auto=format&fit=crop&q=80' },
+          { id: 'dd_4', title: 'Workout & Physique Exercises', startTime: '17:00', endTime: '18:15', visionImageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&auto=format&fit=crop&q=80' },
+          { id: 'dd_5', title: 'Evening Skincare & Sleep', startTime: '22:00', endTime: '23:00', visionImageUrl: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200&auto=format&fit=crop&q=80' }
+        ];
+      }
+
+      function loadStatuses() {
+        try {
+          const s = localStorage.getItem('selfx_dream_day_status_v7_' + todayDateStr) || localStorage.getItem('selfx_dream_day_status_v6_' + todayDateStr);
+          if (s) return JSON.parse(s);
+        } catch (e) {}
+        return {};
+      }
+
+      function saveStatuses(statuses) {
+        localStorage.setItem('selfx_dream_day_status_v7_' + todayDateStr, JSON.stringify(statuses));
+      }
+
+      let currentOngoingId = null;
+
+      function renderWidget() {
+        const now = new Date();
+        let hours = now.getHours();
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12 || 12;
+
+        document.getElementById('widget-clock').textContent = `${hours}:${minutes}`;
+        document.getElementById('widget-ampm').textContent = ampm;
+        document.getElementById('widget-date').textContent = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+
+        const activities = loadActivities();
+        const statuses = loadStatuses();
+
+        const currentMinutes = now.getHours() * 60 + now.getMinutes();
+        let currentRoutine = null;
+
+        for (const act of activities) {
+          if (act.startTime && act.endTime) {
+            const [sh, sm] = String(act.startTime).split(':').map(Number);
+            const [eh, em] = String(act.endTime).split(':').map(Number);
+            const startMin = sh * 60 + sm;
+            const endMin = eh * 60 + em;
+            if (currentMinutes >= startMin && currentMinutes < endMin) {
+              currentRoutine = { ...act, timeRange: `${act.startTime} - ${act.endTime}` };
+              break;
+            }
+          }
+        }
+
+        if (!currentRoutine) {
+          const fallback = activities[0];
+          currentRoutine = { ...fallback, timeRange: `${fallback?.startTime || '07:00'} - ${fallback?.endTime || '08:30'}` };
+        }
+
+        currentOngoingId = currentRoutine.id;
+
+        // Photo for ongoing routine
+        const routinePhoto = (statuses[currentRoutine.id]?.personalPhotoUrl) || currentRoutine.personalPhotoUrl || currentRoutine.visionImageUrl || currentRoutine.mediaUrl || 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&fit=crop&q=80';
+        document.getElementById('ongoing-image').src = routinePhoto;
+        document.getElementById('ongoing-title').textContent = currentRoutine.title;
+        document.getElementById('ongoing-timerange').textContent = currentRoutine.timeRange;
+
+        const isOngoingDone = statuses[currentRoutine.id]?.status === 'completed';
+        const ongoingBtn = document.getElementById('btn-toggle-ongoing');
+        if (isOngoingDone) {
+          ongoingBtn.className = "w-full py-2.5 px-3 rounded-xl border text-xs font-bold flex items-center justify-center gap-2 cursor-pointer active:scale-98 transition-all bg-emerald-500/20 border-emerald-500/40 text-emerald-300";
+          ongoingBtn.innerHTML = "<span>✓ Routine Done for Today (সম্পন্ন হয়েছে)</span>";
+        } else {
+          ongoingBtn.className = "w-full py-2.5 px-3 rounded-xl border text-xs font-bold flex items-center justify-center gap-2 cursor-pointer active:scale-98 transition-all bg-gradient-to-r from-amber-400 to-yellow-400 text-zinc-950 border-amber-400/50 shadow-md";
+          ongoingBtn.innerHTML = "<span>Mark Ongoing Routine Done (টিক দিন)</span>";
+        }
+
+        // Stats
+        const completedCount = activities.filter(a => statuses[a.id]?.status === 'completed').length;
+        const totalCount = activities.length;
+        const percent = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
+
+        document.getElementById('widget-stats').textContent = `${completedCount}/${totalCount} Done (${percent}%)`;
+        document.getElementById('checklist-progress-text').textContent = `${percent}% Done`;
+        document.getElementById('checklist-progressbar').style.width = `${percent}%`;
+
+        // Render tasks
+        const tasksContainer = document.getElementById('tasks-list');
+        tasksContainer.innerHTML = '';
+
+        activities.forEach(act => {
+          const isDone = statuses[act.id]?.status === 'completed';
+          const actPhoto = (statuses[act.id]?.personalPhotoUrl) || act.personalPhotoUrl || act.visionImageUrl || act.mediaUrl;
+
+          const row = document.createElement('div');
+          row.className = `p-2 rounded-xl text-xs flex items-center justify-between border cursor-pointer transition-all select-none active:scale-[0.99] ${
+            isDone ? 'bg-emerald-500/10 border-emerald-500/30 text-zinc-400' : 'bg-white/5 hover:bg-white/10 border-white/10 text-white'
+          }`;
+
+          const imgHtml = actPhoto 
+            ? `<img src="${actPhoto}" class="w-8 h-8 rounded-lg object-cover shrink-0 border border-white/15" alt="" />`
+            : `<div class="w-8 h-8 rounded-lg bg-amber-500/15 border border-amber-500/25 flex items-center justify-center text-amber-400 text-xs shrink-0">⚡</div>`;
+
+          const checkHtml = isDone
+            ? `<div class="w-5 h-5 rounded-md flex items-center justify-center shrink-0 bg-emerald-500 text-zinc-950 font-black text-xs">✓</div>`
+            : `<div class="w-5 h-5 rounded-md flex items-center justify-center shrink-0 border border-zinc-500 bg-black/40"></div>`;
+
+          row.innerHTML = `
+            <div class="flex items-center gap-2.5 truncate flex-1 min-w-0">
+              ${checkHtml}
+              ${imgHtml}
+              <span class="truncate font-medium text-xs ${isDone ? 'line-through text-zinc-500' : 'text-zinc-100'}">${act.title}</span>
+            </div>
+            <span class="text-[10px] font-mono text-zinc-400 shrink-0 ml-2">${act.startTime || ''}</span>
+          `;
+
+          row.addEventListener('click', () => {
+            toggleTask(act.id);
+          });
+
+          tasksContainer.appendChild(row);
+        });
+      }
+
+      function toggleTask(id) {
+        const statuses = loadStatuses();
+        const current = statuses[id];
+        const isDone = current?.status === 'completed';
+        statuses[id] = {
+          ...current,
+          status: isDone ? 'pending' : 'completed',
+          completedAt: isDone ? undefined : new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        };
+        saveStatuses(statuses);
+        if (!isDone) playChime();
+        renderWidget();
+      }
+
+      document.getElementById('btn-toggle-ongoing').addEventListener('click', () => {
+        if (currentOngoingId) toggleTask(currentOngoingId);
+      });
+
+      document.getElementById('btn-add-task').addEventListener('click', () => {
+        const input = document.getElementById('input-new-task');
+        const val = input.value.trim();
+        if (!val) return;
+        const activities = loadActivities();
+        const newAct = {
+          id: 'dd_widget_' + Date.now(),
+          title: val,
+          startTime: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }),
+          endTime: '',
+          category: 'routine'
+        };
+        activities.push(newAct);
+        localStorage.setItem('selfx_dream_day_routine_v7', JSON.stringify(activities));
+        localStorage.setItem('lookmax_dream_activities_v2', JSON.stringify(activities));
+        input.value = '';
+        playChime();
+        renderWidget();
+      });
+
+      document.getElementById('input-new-task').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') document.getElementById('btn-add-task').click();
+      });
+
+      // Periodic timer
+      setInterval(renderWidget, 1000);
+      renderWidget();
+
+      // Register service worker
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      }
+    </script>
+  </body>
+</html>

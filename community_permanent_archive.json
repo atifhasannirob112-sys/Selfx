@@ -1,0 +1,109 @@
+[
+  {
+    "id": "tiktok-post-hamza-darenijaat-1792400000000",
+    "author": "Hamza Malik",
+    "avatarUrlOrBase64": "/assets/models/hamza_malik.jpg",
+    "numberId": "hamza_malik",
+    "createdAt": "2026-11-09T16:40:00.000Z",
+    "content": "Every girl deserves Abu Bakar in her life! 😭 #darenijaat #abubakar #zaryeb #foryoupageofficiall #fypviralシ",
+    "video": "/media/tiktok_hamza_malik_darenijaat.mp4",
+    "image": "/media/tiktok_hamza_malik_darenijaat.jpg",
+    "likes": 290,
+    "likedBy": [
+      "Hamza Malik",
+      "Atif (Lead Creator)",
+      "Zaviyar Nauman",
+      "Daniyal Zafar",
+      "Bilal Abbas",
+      "Shahzad Noor",
+      "Zarrar Khan"
+    ],
+    "isLead": false,
+    "comments": []
+  },
+  {
+    "id": "tiktok-post-1792337065069-pqob",
+    "author": "Atif Nirob",
+    "avatarUrlOrBase64": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+    "numberId": "niromax",
+    "createdAt": "2026-10-18T15:24:25.072Z",
+    "content": "de ligt prime 💀🔥 #viral #foryou #football",
+    "video": "/media/tiktok_1792337065069.mp4",
+    "image": "/media/tiktok_1792337065069.jpg",
+    "likedBy": [
+      "Atif Nirob",
+      "Atif (Lead Creator)",
+      "Hamza Malik",
+      "Zaviyar Nauman"
+    ],
+    "isLead": true,
+    "comments": []
+  },
+  {
+    "id": "tiktok-post-1792307893838-5yx3",
+    "author": "Atif Nirob",
+    "avatarUrlOrBase64": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+    "numberId": "niromax",
+    "createdAt": "2026-10-18T07:18:13.838Z",
+    "content": "Top aesthetic 🔥",
+    "video": "/media/tiktok_1792307886583.mp4",
+    "image": "/media/tiktok_1792307886583.jpg",
+    "likedBy": [
+      "Atif Nirob",
+      "Atif (Lead Creator)",
+      "Hamza Malik",
+      "Zaviyar Nauman"
+    ],
+    "isLead": false,
+    "comments": []
+  },
+  {
+    "id": "tiktok-post-1792228063047-o7ju",
+    "author": "Atif Nirob",
+    "avatarUrlOrBase64": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+    "numberId": "niromax",
+    "createdAt": "2026-10-17T09:07:43.047Z",
+    "content": "Daily glowup ✨",
+    "video": "/media/tiktok_1792228057114.mp4",
+    "image": "/media/tiktok_1792228057114.jpg",
+    "likedBy": [
+      "Atif Nirob",
+      "Atif (Lead Creator)",
+      "Hamza Malik",
+      "Zaviyar Nauman"
+    ],
+    "isLead": false,
+    "comments": []
+  },
+  {
+    "id": "tiktok-post-1790492116900-43yw",
+    "author": "Zaviyar Nauman",
+    "avatarUrlOrBase64": "/assets/models/zaviyar_nauman.jpg",
+    "numberId": "zaviyar_nauman",
+    "createdAt": "2026-09-27T06:55:16.900Z",
+    "content": "Symmetry, workout dedication, and the ultimate transformation mindset. 🔱 Never settle for average. #physique #discipline #growgram",
+    "video": "/media/tiktok_1790492113986.mp4",
+    "image": "/media/tiktok_1790492113986.jpg",
+    "likedBy": [
+      "Zaviyar Nauman",
+      "Atif (Lead Creator)",
+      "Hamza Malik"
+    ],
+    "isLead": false,
+    "comments": []
+  },
+  {
+    "id": "post-founder-welcome",
+    "author": "Atif (Lead Creator)",
+    "avatarUrlOrBase64": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+    "numberId": "itsatifbro",
+    "createdAt": "2026-09-20T08:00:00.000Z",
+    "content": "GrowGram কমিউনিটিতে স্বাগতম! 🚀 আপনার ডেইলি ডিসিপ্লিন, ওয়ার্কআউট এবং গ্লো-আপ ট্রান্সফরমেশন শেয়ার করুন। নো ফেক শো-অফ — শুধুমাত্র রিয়েল ধারাবাহিকতা ও কনসিস্টেন্সি! 💪🔥",
+    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80",
+    "likedBy": [
+      "Atif (Lead Creator)"
+    ],
+    "isLead": true,
+    "comments": []
+  }
+]

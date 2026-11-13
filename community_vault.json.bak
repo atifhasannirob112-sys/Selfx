@@ -1,0 +1,50 @@
+[
+  {
+    "id": "tiktok-post-1792337065069-pqob",
+    "persona": "niromax",
+    "author": "Atif Nirob",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+    "numberId": "niromax",
+    "image": "/media/tiktok_1792337065069.mp4",
+    "mediaType": "video",
+    "caption": "de ligt prime 💀🔥 #viral #foryou #football",
+    "createdAt": "2026-10-18T15:24:25.072Z",
+    "postedToGrowgram": true
+  },
+  {
+    "id": "tiktok-post-1792307893838-5yx3",
+    "persona": "niromax",
+    "author": "Atif Nirob",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+    "numberId": "niromax",
+    "image": "/media/tiktok_1792307886583.mp4",
+    "mediaType": "video",
+    "caption": "Top aesthetic 🔥",
+    "createdAt": "2026-10-18T07:18:13.838Z",
+    "postedToGrowgram": true
+  },
+  {
+    "id": "tiktok-post-1792228063047-o7ju",
+    "persona": "niromax",
+    "author": "Atif Nirob",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+    "numberId": "niromax",
+    "image": "/media/tiktok_1792228057114.mp4",
+    "mediaType": "video",
+    "caption": "Daily glowup ✨",
+    "createdAt": "2026-10-17T09:07:43.047Z",
+    "postedToGrowgram": true
+  },
+  {
+    "id": "tiktok-post-1790492116900-43yw",
+    "persona": "tahmid",
+    "author": "Tahmid Alvi",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+    "numberId": "tahmid_alvi",
+    "image": "/media/tiktok_1790492113986.mp4",
+    "mediaType": "video",
+    "caption": "Symmetry, workout dedication, and the ultimate transformation mindset. 🔱 Never settle for average. #physique #discipline #growgram",
+    "createdAt": "2026-09-27T06:55:16.900Z",
+    "postedToGrowgram": true
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "m_niromax",
+    "name": "Atif Nirob",
+    "username": "niromax",
+    "email": "itsatifbro@gmail.com",
+    "numberId": "niromax",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+    "points": 3500,
+    "level": 18,
+    "niche": "Daily consistency & transformation 🚀",
+    "isOnline": true,
+    "isLead": true,
+    "friends": [],
+    "incomingRequests": [],
+    "outgoingRequests": []
+  }
+]
